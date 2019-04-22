@@ -44,13 +44,14 @@ Namespace DXSample
 			table.Columns.Add(New DataColumn("Age", GetType(Integer)))
 			table.Columns.Add(New DataColumn("ID", GetType(Integer)))
 			For i As Integer = 0 To 49
-				Dim name As String = "Adam"
+'INSTANT VB NOTE: The variable name was renamed since Visual Basic does not handle local variables named the same as class members well:
+				Dim name_Renamed As String = "Adam"
 				Dim secondName As String = "Smith"
 				If i Mod 2 = 0 Then
-					name = "Ben"
+					name_Renamed = "Ben"
 					secondName = "Black"
 				End If
-				table.Rows.Add(name, secondName, 20 + i \ 2, i Mod 10)
+				table.Rows.Add(name_Renamed, secondName, 20 + i \ 2, i Mod 10)
 			Next i
 			Return table
 		End Function
